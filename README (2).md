@@ -1,0 +1,41 @@
+1) Jeneral Explaination about the project:
+This project is a simple program created using IntelliJ that functions like a terminal (or command line). It allows the user to type commands to do things like create a folder, create a file, view a folder, navigate between folders, and more. The program consists of two main parts:
+MiniShell: This is the main class that runs the program and waits for user input.
+ShellCommandHandler: This class contains all the functions that handle commands (such as mkdir, cd, ls, etc.).
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+2) How to compile and run the code: 
+To run the program: Open IntelliJ IDEA and create two classes: one for MiniShell and the other for ShellCommandHandler.
+-In MiniShell: I used the Scanner library to allow the user to type commands. I created a Scanner object to read user input. I also created a ShellCommandHandler object to use its functions. I used a while loop to keep the program running until the user types the "exit" command. I used if statements to validate the user's command and call the correct function.
+-In ShellCommandHandler:
+I used java.io.File and java.io.IOException to handle files and folders. I created a special variable called currentDirectory to store the user's current directory. I've also created a number of useful functions:
+ShellCommandHandler(): Specifies the initial directory
+printWorkingDirectory(): Displays your current location
+listDirectory(): Displays files and folders
+changeDirectory(string name): Moves to another directory
+makeDirectory(string name): Creates a new directory
+createFile(string name): Creates a new file
+printHelp(): Displays all commands
+getCurrentDirectory(): Returns the current directory
+To run the program, the user enters a command (such as ls or cd) and optionally the name of a folder or file. The program divides the input into an array, determines the command the user wants, and then calls the correct function to perform the task.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+4)  An example for an output:
+TWhen the program starts, the user will see the following welcome message: Welcome to MiniShell! Type "help" to get a list of commands. The user can then type a command, such as: ls. The ls command lists everything inside the current directory.
+What happens next: The program calls the listDirectory() function. This function checks to see if the directory is not empty and then prints something like: Files and directories in: C:\Users\YourName\MyProject. It then loops through all the items and prints: [DIR] FolderName, if it's a folder. [FILE] FileName.txt, if it's a file. [UNKW] Something else, if it's something unknown. This helps the user clearly see what's inside the directory.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+4) Explaination for the functions:
+
+- ShellCommandHandler() : Initialize currentDirectory to the user's current working directory, uses Java to find where the user started and creates a File object to work with folders.
+
+- printWorkingDirectory() : Print the absolute path of the current directory.
+
+- listDirectory() : List all files and directories in the current directory, show which items are folders and which are files and shows a message if the folder is empty or there’s a problem opening it.
+
+- changeDirectory(String name) : Lets you move into a different folder, the user can use ".." to go up one level, checks if the folder exists before moving, shows an error if the folder doesn’t exist or something goes wrong and keeps track of your current folder.
+
+- makeDirectory(String name) : Creates a new folder, checks that the folder name is not empty or already used. shows a message if the folder is made or if something goes wrong.
+
+- createFile(String name) : Creates a new empty file in the current folder, checks the file name before creating, makes sure the file doesn’t already exist and catches errors and shows helpful messages if something goes wrong.
+
+- printHelp() : Shows a list of all the available commands and shoe the user how to use each command and what it does.
+
+- getCurrentDirectory() : Return the current directory.
