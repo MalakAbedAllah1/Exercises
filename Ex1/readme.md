@@ -91,7 +91,4 @@ The project uses Java's `File` class instead of the newer `Path` API. Key differ
 - `Path` objects (from java.nio.file package) are more modern and flexible, supporting advanced operations and better handling of different file systems.
 
 ## Author
-Created as a Java file system operations project demonstration.
-
-## License
-This project is provided for educational purposes.
+By: Malak AbedAllah
