@@ -27,10 +27,6 @@ This shell implements the following file system operations using Java's `java.io
 
 ## Getting Started
 
-### Prerequisites
-- Java Development Kit (JDK) 8 or higher
-- Java Runtime Environment (JRE)
-
 ### Compilation
 Compile the Java files using javac:
 ```bash
